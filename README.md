@@ -31,7 +31,7 @@ For LVGL project templates for 5-inch and 10.1-inch *Riverdi STM32 Embedded Disp
 
 [1] Clone this respository (do not forget about *--recursive* flag!):
 ```
-git clone --recursive https://github.com/lvgl/lv_port_riverdi_101-stm32h7
+git clone --recursive https://github.com/lvgl/lv_port_riverdi_70-stm32h7
 ```
 [2] Open *STM32CubeIDE* and import project:
 ```
