@@ -18,7 +18,7 @@ static void disp_flush_complete (DMA2D_HandleTypeDef*);
  *  STATIC VARIABLES
  **********************/
 static lv_display_t * disp;
-static __attribute__((aligned(32))) uint8_t buf_1[MY_DISP_HOR_RES * 64 * 2];
+static __attribute__((aligned(32))) uint8_t buf_1[MY_DISP_HOR_RES * 60 * 4];
 
 /**********************
  *   GLOBAL FUNCTIONS

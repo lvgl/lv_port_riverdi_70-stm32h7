@@ -15,8 +15,9 @@ You can purchase the 7-inch Riverdi STM32 Embedded Displays from several sources
 ## Benchmark
 
 ### Buffer configuration
-The example project uses LVGL's `LV_DISPLAY_RENDER_MODE_PARTIAL` mode with a single, 64 line buffer in order to save memory. This buffer requires 128kB memory. By using two buffers the performance could be improved a little in exchange for the higher memory use. Depending on the screen content enlarging the buffer may also improve the performance. There is no strict rule for the optimum buffer size, as it depends on many factors (screen size, processor speed, LCD interface). In practice a 1/10th size buffer is a good compromise between performance and memory use.
-The buffer configuration is in the file [lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c).
+The example is configured for 32-bit ARGB8888 color format, which is the native color format of the panel. The project uses LVGL's `LV_DISPLAY_RENDER_MODE_PARTIAL` mode with a single, 60 line (1/10th of the height of the screen) buffer in order to save memory. This buffer requires 240kB memory.
+If there is enough memory available, then the performance can be improved by using two buffers, since LVGL can render into the second buffer, while the first one is being transferred to the display memory. Depending on the screen content enlarging the buffer may also improve the performance. There is no strict rule for the optimum buffer size, as it depends on many factors (screen size, screen content, processor speed, RAM speed, type of the LCD interface). In practice a 1/10th screen size buffer is a good compromise between performance and memory use, but this is an area for potential optimization, depending on the application.
+The buffer configuration can be found in the file [lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c).
 
 [![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/88fd9a26-ec84-4f7b-98e8-313cf6a2568f)](![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/cad4801b-928b-4b11-bb2a-8f987625acc9))
 
