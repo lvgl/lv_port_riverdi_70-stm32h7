@@ -14,7 +14,9 @@ You can purchase the 7-inch Riverdi STM32 Embedded Displays from several sources
 
 ## Benchmark
 
-TODO: add buffer configuration
+### Buffer configuration
+The example project uses LVGL's `LV_DISPLAY_RENDER_MODE_PARTIAL` mode with a single, 64 line buffer in order to save memory. This buffer requires 128kB memory. By using two buffers the performance could be improved a little in exchange for the higher memory use. Depending on the screen content enlarging the buffer may also improve the performance. There is no strict rule for the optimum buffer size, as it depends on many factors (screen size, processor speed, LCD interface). In practice a 1/10th size buffer is a good compromise between performance and memory use.
+The buffer configuration is in the file [lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c).
 
 [![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/88fd9a26-ec84-4f7b-98e8-313cf6a2568f)](![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/cad4801b-928b-4b11-bb2a-8f987625acc9))
 
@@ -46,13 +48,14 @@ TODO: add buffer configuration
 - Haptic feedback driver output (DRV2605L)
 
 ## Getting started
+To be able to flash and debug your program you will need to purchase an SWD debug probe which supports the ARM Cortex-M7 core, e.g the STMicro ST-Link V2/V3 or the Segger J-Link.
 
 ### Hardware setup
-- TODO: Connect power supply (port, voltage)
-- TODO: Connect debugger
+- Connect a 6-48V power supply to the POWER header on the board using the supplied cable. The board draws about 0.85A at 6V.
+- Connect a debug probe to the SWD header using the supplied cable.
   
 ### Software setup
-- Install [STM32 CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)
+- Install [STM32 CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) with processor support for the STM32H757XIH6.
 
 ### Run the project
 - Clone the project: `git clone --recursive https://github.com/lvgl/lv_port_riverdi_70-stm32h7`
@@ -61,7 +64,7 @@ TODO: add buffer configuration
 - Click the ![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/ad1ba904-f917-4e0c-97b3-1c1ca12cf185) Run button to flash the project
     
 ### Debugging
-- After building the project click the Debug button ![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/369e95fb-dbfb-44d8-9250-0a5f3f8bfc60) to flash the project
+- After building the project click the Debug button ![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/369e95fb-dbfb-44d8-9250-0a5f3f8bfc60) to flash the project. You will need to select the correct debug probe for the first run.
 
 ## Notes
 This repository supports all configuration of 7-inch *Riverdi STM32 Embedded Displays*:
