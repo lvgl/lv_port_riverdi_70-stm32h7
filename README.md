@@ -9,7 +9,7 @@ STM32 Embedded 7.0” display is all-in-one complete and open-platform solution 
 You can purchase the 7-inch Riverdi STM32 Embedded Displays from several sources:
 
 - [Riverdi's website](https://riverdi.com/product/7-inch-lcd-display-capacitive-touch-panel-optical-bonding-uxtouch-stm32h7-rvt70hssnwc00-b)
-- [Mouser](https://www.mouser.pl/c/?q=RVT70HSS)
+- [Mouser](https://www.mouser.com/c/?q=RVT70HSS)
 - [TME](https://www.tme.com/us/en-us/katalog/intelligent-displays-modules_113439/?params=2:968;1134:1478578;1132:1584266;1136:1904411) 
 
 ## Benchmark
@@ -23,7 +23,7 @@ The board can also handle 32-bit ARGB8888 format rendering, but the performance 
 
 Direct mode rendering seems to be not feasible on this board, because in direct mode the color format must be the native format -- i.e., ARGB8888 --, and apparently the SDRAM memory is not fast enough for two full sized 32-bit buffers.
 
-The buffer configuration can be found in the file [lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c).
+The buffer configuration can be found in the file [lv_port_riverdi_70-stm32h7/CM7/Core/Src/lvgl_port_display.c](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/blob/master/CM7/Core/Src/lvgl_port_display.c).
 
 [![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/88fd9a26-ec84-4f7b-98e8-313cf6a2568f)](![image](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/cad4801b-928b-4b11-bb2a-8f987625acc9))
 
