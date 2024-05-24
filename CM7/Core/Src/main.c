@@ -99,6 +99,7 @@ int main(void)
 /* USER CODE BEGIN Boot_Mode_Sequence_0 */
   int32_t timeout;
 /* USER CODE END Boot_Mode_Sequence_0 */
+/* Enable the CPU Cache */
 
   /* Enable I-Cache---------------------------------------------------------*/
   SCB_EnableICache();
@@ -198,6 +199,7 @@ Error_Handler();
   /* lvgl demo */
   lv_demo_widgets();
   //lv_demo_music();
+  //lv_demo_benchmark();
 
   /* pwm */
   if (HAL_TIM_PWM_Start(&htim15, TIM_CHANNEL_1) != HAL_OK)
