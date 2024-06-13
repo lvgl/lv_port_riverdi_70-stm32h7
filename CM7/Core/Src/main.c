@@ -191,6 +191,7 @@ Error_Handler();
 
   /* initialize LVGL framework */
   lv_init();
+  lv_tick_set_cb(HAL_GetTick);
 
   /* initialize display and touchscreen */
   lvgl_display_init();
