@@ -4,6 +4,13 @@
 
 STM32 Embedded 7.0” display is all-in-one complete and open-platform solution being able to independently handle the visual layer of devices with the need for high computing performance. The STM32 Embedded Displays series are industrial-quality LCD-TFT solutions based on the STM32H757XIH6 microcontroller. It has been designed in a way that allows to meet most of the hardware and programming challenges faced by engineers, including access to all interfaces.
 
+## Benchmark
+
+In the video partial buffering was used with 1/10 screen sized buffers. The rendered images are copied to te frame buffer wit DMA2D without VSYNC, therefore sometearing is visible in some tests.
+
+[![Riverdi 7-inch STM32-cover](https://github.com/lvgl/lv_port_riverdi_70-stm32h7/assets/7599318/b136cadf-32c3-405c-8082-6613c99aedec)
+](https://www.youtube.com/watch?v=IB9t2JLPlI0)
+
 ## Buy
 
 You can purchase the 7-inch Riverdi STM32 Embedded Displays from several sources:
