@@ -34,11 +34,7 @@
         "https://raw.githubusercontent.com/lvgl/project-creator/master/meta/images/riverdi/logo.svg"
     ],
     "image": "https://raw.githubusercontent.com/lvgl/lv_port_riverdi_70-stm32h7/master/board_images/riverdi-7-inch-STM32.webp",
-    "buy_now_links": [
-        "https://riverdi.com/product/7-inch-lcd-display-capacitive-touch-panel-optical-bonding-uxtouch-stm32h7-rvt70hssnwc00-b",
-        "https://www.mouser.com/c/?q=RVT70HSS",
-        "https://www.tme.com/us/en-us/katalog/?queryPhrase=RVT70HSSNWC00-B"
-    ],
+    "buy_now_links": ["https://riverdi.com/product/7-inch-lcd-display-capacitive-touch-panel-optical-bonding-uxtouch-stm32h7-rvt70hssnwc00-b"],
     "branches": [
         "release/v9.2"
     ],
