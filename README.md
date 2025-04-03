@@ -1,4 +1,4 @@
-# LVGL ported to the 7-inch Riverdi STM32 Embedded Displays (STM32H757XIH86)
+# LVGL ported to the 7-inch Riverdi STM32 Embedded Displays (STM32H757XIH6)
 
 ## Overview
 
@@ -17,7 +17,7 @@ You can purchase the 7-inch Riverdi STM32 Embedded Displays from several sources
 
 - [Riverdi's website](https://riverdi.com/product/7-inch-lcd-display-capacitive-touch-panel-optical-bonding-uxtouch-stm32h7-rvt70hssnwc00-b)
 - [Mouser](https://www.mouser.com/c/?q=RVT70HSS)
-- [TME](https://www.tme.com/us/en-us/katalog/intelligent-displays-modules_113439/?params=2:968;1134:1478578;1132:1584266;1136:1904411) 
+- [TME](https://www.tme.com/us/en-us/katalog/?queryPhrase=RVT70HSSNWC00-B) 
 
 ## Benchmark
 
