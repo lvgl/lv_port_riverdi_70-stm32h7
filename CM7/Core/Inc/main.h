@@ -73,6 +73,8 @@ void Error_Handler(void);
 #define FMC_NBL2_GPIO_Port GPIOI
 #define FDCAN2_RX_Pin GPIO_PIN_5
 #define FDCAN2_RX_GPIO_Port GPIOB
+#define CTP_RST_Pin GPIO_PIN_5
+#define CTP_RST_GPIO_Port GPIOK
 #define R_CS_Pin GPIO_PIN_10
 #define R_CS_GPIO_Port GPIOG
 #define R_MISO_Pin GPIO_PIN_9
@@ -113,8 +115,6 @@ void Error_Handler(void);
 #define D22_GPIO_Port GPIOH
 #define USB1_OVERCURRENT_Pin GPIO_PIN_15
 #define USB1_OVERCURRENT_GPIO_Port GPIOC
-#define CTP_RST_Pin GPIO_PIN_14
-#define CTP_RST_GPIO_Port GPIOC
 #define ETH_nINT_Pin GPIO_PIN_2
 #define ETH_nINT_GPIO_Port GPIOE
 #define FMC_NBL0_Pin GPIO_PIN_0
@@ -163,6 +163,9 @@ void Error_Handler(void);
 #define FDCAN1_RX_GPIO_Port GPIOA
 #define D31_Pin GPIO_PIN_10
 #define D31_GPIO_Port GPIOI
+#define CTP_INT_Pin GPIO_PIN_11
+#define CTP_INT_GPIO_Port GPIOI
+#define CTP_INT_EXTI_IRQn EXTI15_10_IRQn
 #define USR_BTN_1_Pin GPIO_PIN_6
 #define USR_BTN_1_GPIO_Port GPIOC
 #define SDCLK_Pin GPIO_PIN_8
@@ -211,9 +214,6 @@ void Error_Handler(void);
 #define RS485_TX_GPIO_Port GPIOA
 #define D7_Pin GPIO_PIN_10
 #define D7_GPIO_Port GPIOE
-#define CTP_INT_Pin GPIO_PIN_3
-#define CTP_INT_GPIO_Port GPIOH
-#define CTP_INT_EXTI_IRQn EXTI3_IRQn
 #define SDNWE_Pin GPIO_PIN_5
 #define SDNWE_GPIO_Port GPIOH
 #define A7_Pin GPIO_PIN_13

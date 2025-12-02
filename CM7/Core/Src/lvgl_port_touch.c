@@ -32,11 +32,11 @@ lvgl_touchscreen_init (void)
   /* 'i2c1' bus and touchscreen reset pin are already configure by CubeMX,
    *  here we just need to reset touchscreen controller */
   HAL_GPIO_WritePin(CTP_RST_GPIO_Port, CTP_RST_Pin, GPIO_PIN_SET);
-  HAL_Delay(10);
+  vTaskDelay(pdMS_TO_TICKS(10));
   HAL_GPIO_WritePin(CTP_RST_GPIO_Port, CTP_RST_Pin, GPIO_PIN_RESET);
-  HAL_Delay(10);
+  vTaskDelay(pdMS_TO_TICKS(10));
   HAL_GPIO_WritePin(CTP_RST_GPIO_Port, CTP_RST_Pin, GPIO_PIN_SET);
-  HAL_Delay(10);
+  vTaskDelay(pdMS_TO_TICKS(10));
 
   /* basic LVGL driver initialization */
   lv_indev_t * indev = lv_indev_create();

@@ -189,29 +189,34 @@ Error_Handler();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
-  /* initialize LVGL framework */
-  lv_init();
-  lv_tick_set_cb(HAL_GetTick);
-
-  /* initialize display and touchscreen */
-  lvgl_display_init();
-  lvgl_touchscreen_init();
-
-  /* lvgl demo */
-  lv_demo_widgets();
-  //lv_demo_music();
-  //lv_demo_benchmark();
-
-  /* pwm */
-  if (HAL_TIM_PWM_Start(&htim15, TIM_CHANNEL_1) != HAL_OK)
-    Error_Handler();
-  /* USER CODE END 2 */
-
   /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init();
+    MX_FREERTOS_Init();
 
-  /* Start scheduler */
-  osKernelStart();
+    /* initialize LVGL framework */
+    lv_init();
+
+    /* initialize display and touchscreen */
+    lvgl_display_init();
+    lvgl_touchscreen_init();
+
+    lv_tick_set_cb(HAL_GetTick);
+
+    /* lvgl demo */
+    lv_demo_widgets();
+  //  lv_demo_music();
+  //  lv_demo_benchmark();
+
+    /* pwm */
+    if (HAL_TIM_PWM_Start(&htim15, TIM_CHANNEL_1) != HAL_OK)
+      Error_Handler();
+
+    /* USER CODE END 2 */
+
+    /* Init scheduler */
+    osKernelInitialize();
+
+    /* Start scheduler */
+    osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
