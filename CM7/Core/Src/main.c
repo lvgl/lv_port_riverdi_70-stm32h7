@@ -189,8 +189,7 @@ Error_Handler();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
-  /* Call init function for freertos objects (in freertos.c) */
-    MX_FREERTOS_Init();
+
 
     /* initialize LVGL framework */
     lv_init();
@@ -210,6 +209,8 @@ Error_Handler();
     if (HAL_TIM_PWM_Start(&htim15, TIM_CHANNEL_1) != HAL_OK)
       Error_Handler();
 
+    /* Call init function for freertos objects (in freertos.c) */
+    MX_FREERTOS_Init();
     /* USER CODE END 2 */
 
     /* Init scheduler */
