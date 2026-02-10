@@ -10,6 +10,8 @@ extern "C" {
  *********************/
 
 #include "lvgl/lvgl.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 /**********************
  * GLOBAL PROTOTYPES
